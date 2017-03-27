@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-3 hidden-xs hidden-sm">
+    <nav id="toc" class="affix"></nav>
+  </div>
+  <div class="col-md-9">
+    <article class="markdown-body">
+      {{ content }}
+    </article>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $('#markdown-toc').addClass('nav');
+  $('#markdown-toc ul:first ul').addClass('nav');
+  $('#markdown-toc').appendTo('#toc');
+  $('#toc ul:first').append($('#markdown-toc ul:first').html());
+  $('#markdown-toc ul:first').remove();
+  $('body').scrollspy({ target: '#markdown-toc', offset: 100});
+});
+</script>
+<style type="text/css">
+  body {
+    padding-top: 2em;
+    padding-bottom: 10em;
+  }
+  #markdown-toc a {
+    font-size: 1.2em;
+  }
+  #markdown-toc #markdown-toc-it- {
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+  #markdown-toc .nav {
+    display: none;
+  }
+  #markdown-toc .active .nav {
+    padding-left: 1em;
+    display: block;
+    max-width: 240px;
+  }
+  #markdown-toc .active .nav>li>a {
+    padding: 5px 0 5px 1em;
+    color: #666;
+  }
+  .markdown-body {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 3em;
+  }
+  .markdown-body h2 {
+    margin: 48px 0;
+  }
+  #markdown-toc .active   .nav  .active a  ,
+  #markdown-toc .active  > a{
+    color: #000 !important;
+    font-weight: bold;
+  }
+</style>
