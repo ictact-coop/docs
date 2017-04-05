@@ -12,7 +12,7 @@ layout: default
   <div class="col-sm-6">
     <div class="card">
       <div class="card-block card-inverse card-primary text-center">
-        <h3 class="card-title"><a href="{{ constitution.url }}">{{ constitution.title }}</a></h3>
+        <h3 class="card-title"><a href="{{ constitution.url | relative_url }}">{{ constitution.title }}</a></h3>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@ layout: default
   <div class="col-sm-4">
     <div class="card my-2 card-outline-success">
       <div class="card-block text-center">
-        <h4 class="card-title"><a href="{{ code.url }}">{{ code.title }}</a></h4>
+        <h4 class="card-title"><a href="{{ code.url | relative_url }}">{{ code.title }}</a></h4>
       </div>
     </div>
   </div>
