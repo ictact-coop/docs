@@ -7,8 +7,8 @@ $(function(){
   $('#toc ul.nav li').addClass('nav-item');
   $('#toc ul.nav li > a').addClass('nav-link');
   $('#markdown-toc ul:first').remove();
-  $('#toc').prepend('<a class="badge badge-info to-list" href="/"><small>목록으로</small></a>');
-  $('#toc').append('<a class="badge badge-info to-list" href="/"><small>목록으로</small></a>');
+  $('#toc').prepend('<a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a>');
+  $('#toc').append('<a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a>');
   //$('body').scrollspy({ target: "#markdown-toc", offset: 100});
   $('#toc').on('click', '.active', function(){
     $(this).removeClass('active');
