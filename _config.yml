@@ -1,21 +1,30 @@
 title: 공동체IT사회적협동조합 정관 및 규약
-description: >
-  시민사회단체와 공익IT활동가가 함께 만드는 기술공동체, 공동체IT사회적협동조합의 정관과 규약입니다.
+description: 시민사회단체와 공익IT활동가가 함께 만드는 기술공동체, 공동체IT사회적협동조합의 정관과 규약입니다.
 
 baseurl: ''
 url: ''
+
+timezone: Asia/Seoul
+permalink: pretty
 
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
 
-timezone: Asia/Seoul
-permalink: pretty
+sass:
+  sass_dir: _scss
+  style: compressed
+
+collections:
+  docs:
+    output: true
 
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: "_docs"
+      type: "docs"
     values:
-      layout: "default"
+      layout: "scrollspy"
+      category: "code"

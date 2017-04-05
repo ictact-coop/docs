@@ -1,0 +1,78 @@
+<script>
+$(function(){
+  $('#markdown-toc').addClass('nav flex-column');
+  $('#markdown-toc ul:first ul').addClass('nav');
+  $('#markdown-toc').appendTo('#toc');
+  $('#toc ul:first').append($('#markdown-toc ul:first').html());
+  $('#toc ul.nav li').addClass('nav-item');
+  $('#toc ul.nav li > a').addClass('nav-link');
+  $('#markdown-toc ul:first').remove();
+  $('#toc').prepend('<a class="badge badge-info to-list" href="/"><small>목록으로</small></a>');
+  $('#toc').append('<a class="badge badge-info to-list" href="/"><small>목록으로</small></a>');
+  //$('body').scrollspy({ target: "#markdown-toc", offset: 100});
+  $('#toc').on('click', '.active', function(){
+    $(this).removeClass('active');
+  });
+  $('body').on('activate.bs.scrollspy', function () {
+    console.log('!!!!!');
+  })
+});
+</script>
+<style type="text/css">
+  body {
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+    position: relative;
+  }
+  #toc {
+    position: fixed;
+    height: 800px;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+  }
+  #markdown-toc > li:first-of-type a {
+    color: #000;
+    font-weight: bold;
+    padding-left: .8rem;
+    font-size: 1.2rem;
+  }
+  #markdown-toc .nav {
+    display: none;
+  }
+  #markdown-toc .active + .nav {
+    padding-left: 1em;
+    display: block;
+    max-width: 240px;
+  }
+  .markdown-body {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 3em;
+  }
+  .markdown-body h2 {
+    margin: 48px 0;
+  }
+  .markdown-body h3 {
+    margin: 24px 0;
+  }
+  #markdown-toc .active + .nav .active a,
+  #markdown-toc .active {
+    color: #000 !important;
+    font-weight: bold;
+  }
+  @media (max-width: 768px) {
+    #toc {
+      width: 180px;
+    }
+    #markdown-toc .active + .nav {
+      padding-left: .5em;
+      display: block;
+    }
+    #markdown-toc a {
+      font-size: .9rem;
+    }
+  }
+  .to-list {
+    margin-left: .8rem;
+  }
+</style>

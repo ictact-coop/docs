@@ -1,7 +1,63 @@
 ---
 title: 공동체IT사회적협동조합 정관
-layout: scrollspy
+layout: default
 ---
 
-{% capture md %}{% include_relative _doc/constitution.md %}{% endcapture %}
-{{ md | markdownify }}
+{% assign constitution = site.docs | where:"category", "constitution" %}
+{% assign constitution = constitution[0] %}
+
+<h1 class="my-5">공동체IT사회적협동조합 문서</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block card-inverse card-primary text-center">
+        <h3 class="card-title"><a href="{{ constitution.url }}">{{ constitution.title }}</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="my-5">규약</h3>
+<div class="row">
+  {% assign codes = site.docs | where:"category", "code" %}
+  {% for code in codes  %}
+  <div class="col-sm-4">
+    <div class="card my-2 card-outline-success">
+      <div class="card-block text-center">
+        <h4 class="card-title"><a href="{{ code.url }}">{{ code.title }}</a></h4>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .card, .card-block {
+    box-sizing: border-box;
+    transition: background-color .5s, border .5s, box-shadow .5s;
+  }
+  .card-title {
+    margin-top: .75rem;
+  }
+  .card-inverse a {
+    color: #fff;
+  }
+  .card-primary:hover {
+    background: transparent;
+    border: 1px solid #0275d8;
+    box-shadow : 0 0 10px #888;
+  }
+  .card-primary:hover a {
+    color: #0275d8;
+  }
+  .card-outline-success a {
+    color: #5cb85c;
+  }
+  .card-outline-success:hover {
+    background: #5cb85c;
+  }
+  .card-outline-success:hover a {
+    color: #fff;
+  }
+</style>
