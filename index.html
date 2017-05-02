@@ -32,6 +32,21 @@ layout: default
   {% endfor %}
 </div>
 
+<h2 class="my-5">사업 계획</h3>
+<div class="row">
+  {% assign plans = site.docs | where:"category", "plan" %}
+  {{ plans.inspect }}
+  {% for plan in plans  %}
+  <div class="col-sm-4">
+    <div class="card my-2 card-outline-success">
+      <div class="card-block text-center">
+        <h4 class="card-title"><a href="{{ plan.url | relative_url }}">{{ plan.title }}</a></h4>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
 <style>
   .card, .card-block {
     box-sizing: border-box;
