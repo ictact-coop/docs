@@ -559,3 +559,12 @@ category: constitution
 
 - 제1조 이 정관은 미래창조과학부장관의 인가를 받은 날부터 시행한다.
 - 제2조 초대임원의 임기는 2019년 정기총회까지로 정한다.
+
+
+
+## 수정 이력
+
+- [2017-03-22 임시 총회 의결로 정관 수정](https://github.com/ictact-coop/docs/commit/14650194639a6ab5f0ed9e4710cbc11f530c421f?short_path=02c707c#diff-02c707c0334b984ad84a31e2117ffd5d)
+
+
+[목록 보기]({{ site.github.repository_url | append: '/commits/gh-pages/' | append: page.path }}){:.badge.badge-info.pull-right}
