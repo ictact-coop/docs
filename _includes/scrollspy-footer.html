@@ -1,3 +1,4 @@
+
 <script>
 $(function(){
   $('#markdown-toc').addClass('nav flex-column');
@@ -8,8 +9,9 @@ $(function(){
   $('#toc ul.nav li > a').addClass('nav-link');
   $('#markdown-toc ul:first').remove();
   $('#toc').prepend('<a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a>');
+  $('#toc').prepend('<a class="badge badge-warning to-list float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><small>수정하기</small></a>');
   $('#toc').append('<a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a>');
-  //$('body').scrollspy({ target: "#markdown-toc", offset: 100});
+  $('#toc').append('<a class="badge badge-warning to-list float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><small>수정하기</small></a>');
   $('#toc').on('click', '.active', function(){
     $(this).removeClass('active');
   });
@@ -72,5 +74,8 @@ $(function(){
   }
   .to-list {
     margin-left: .8rem;
+  }
+  .to-list.float-right {
+    margin-top: .4rem;
   }
 </style>
