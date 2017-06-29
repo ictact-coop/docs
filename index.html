@@ -35,12 +35,25 @@ layout: default
 <h2 class="my-5">사업 계획</h3>
 <div class="row">
   {% assign plans = site.docs | where:"category", "plan" %}
-  {{ plans.inspect }}
   {% for plan in plans  %}
   <div class="col-sm-4">
     <div class="card my-2 card-outline-success">
       <div class="card-block text-center">
         <h4 class="card-title"><a href="{{ plan.url | relative_url }}">{{ plan.title }}</a></h4>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h2 class="my-5">참고 자료</h3>
+<div class="row">
+  {% for reference in site.data.references %}
+  <div class="col-sm-4">
+    <div class="card my-2 card-outline-info">
+      <div class="card-block text-center">
+        <h4 class="card-title"><a href="{{ reference.url }}" target="_blank">{{ reference.title | newline_to_br }}</a></h4>
+        {% if reference.source %}<p class="text-muted"><a href="{{ reference.source }}" target="_blank">출처</a></p>{% endif %}
       </div>
     </div>
   </div>
