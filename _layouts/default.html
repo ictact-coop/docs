@@ -24,8 +24,9 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-TD5PB8Q');</script>
   <!-- End Google Tag Manager -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ "/css/github-markdown.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/css/style.css" | relative_url }}">
 </head>
 <body data-spy="scroll" data-target="#markdown-toc">
   <!-- Google Tag Manager (noscript) -->
@@ -38,9 +39,10 @@
   <div class="container">
     {{ content }}
   </div>
-  <script src="//code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-  <script src="//cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   {% if page.layout == 'scrollspy' %}{% include scrollspy-footer.html %}{% endif %}
+  {% include webfont.html %}
 </body>
 </html>

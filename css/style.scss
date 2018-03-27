@@ -1,0 +1,92 @@
+---
+---
+
+h1, h2, h3, h4, h5 {
+  font-family: "Noto Sans KR", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+p, small, span, div, li {
+  font-family: "Noto Sans KR", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
+h1 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+section {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #f8f9fa;
+  h2 {
+    small {
+      font-size: 50%;
+      margin-top: .6rem;
+      color: #6c757d;
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+
+  .card {
+    box-sizing: border-box;
+    transition: background-color .5s, border .5s, box-shadow .5s;
+  }
+
+  .card-title {
+    margin-top: .75rem;
+  }
+
+  .border-primary {
+    a {
+      color: #007bff;
+    }
+    &:hover {
+      background: #007bff;
+      border: 1px solid #0275d8;
+      box-shadow : 0 0 10px #888;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .border-success {
+    a {
+      color: #28a745;
+    }
+    &:hover {
+      background: #28a745;
+      border: 1px solid #28a745;
+      box-shadow : 0 0 10px #888;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .border-warning {
+    a {
+      color: #ffc107;
+    }
+    &:hover {
+      background: #ffc107;
+      border: 1px solid #ffc107;
+      box-shadow : 0 0 10px #888;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .border-info {
+    a {
+      color: #17a2b8;
+    }
+    &:hover {
+      background: #17a2b8;
+      border: 1px solid #17a2b8;
+      box-shadow : 0 0 10px #888;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

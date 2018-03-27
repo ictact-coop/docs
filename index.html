@@ -3,89 +3,68 @@ title: 공동체IT사회적협동조합 정관
 layout: default
 ---
 
-{% assign constitution = site.docs | where:"category", "constitution" %}
-{% assign constitution = constitution[0] %}
+{% assign constitution = site.docs | where: "category", "constitution" %}
+{% assign constitution = constitution | first %}
 
-<h1 class="my-5">공동체IT사회적협동조합 문서</h1>
+<h1>공동체IT사회적협동조합 문서</h1>
 
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-block card-inverse card-primary text-center">
-        <h3 class="card-title"><a href="{{ constitution.url | relative_url }}">{{ constitution.title }}</a></h3>
-      </div>
+<section id="constitution">
+  <h2>정관 <small>constitution 헌법</small></h2>
+  <div class="card border-primary col-sm-6">
+    <div class="card-body text-center">
+      <h3 class="card-title">
+        <a href="{{ constitution.url | relative_url }}">{{ constitution.title }}</a>
+      </h3>
     </div>
   </div>
-</div>
+</section>
 
-<h2 class="my-5">규약</h3>
-<div class="row">
-  {% assign codes = site.docs | where:"category", "code" %}
-  {% for code in codes  %}
-  <div class="col-sm-4">
-    <div class="card my-2 card-outline-success">
-      <div class="card-block text-center">
-        <h4 class="card-title"><a href="{{ code.url | relative_url }}">{{ code.title }}</a></h4>
+<section id="codes">
+  <h2>규약 <small>codes 법률</small></h2>
+  <div class="row">
+    {% assign codes = site.docs | where: "category", "code" %}
+    {% for code in codes  %}
+    <div class="col-sm-4">
+      <div class="card my-2 border-success">
+        <div class="card-body text-center py-3">
+          <h4 class="card-title">
+            <a{% if forloop.first %} class="small"{% endif %} href="{{ code.url | relative_url }}">{{ code.title }}</a>
+          </h4>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
 
-<h2 class="my-5">사업 계획</h3>
-<div class="row">
-  {% assign plans = site.docs | where:"category", "plan" %}
-  {% for plan in plans  %}
-  <div class="col-sm-4">
-    <div class="card my-2 card-outline-success">
-      <div class="card-block text-center">
-        <h4 class="card-title"><a href="{{ plan.url | relative_url }}">{{ plan.title }}</a></h4>
+<section id="plans">
+  <h2>사업 계획 <small>plans</small></h2>
+  <div class="row">
+    {% assign plans = site.docs | where: "category", "plan" %}
+    {% for plan in plans  %}
+    <div class="col-sm-4">
+      <div class="card my-2 border-warning">
+        <div class="card-body text-center py-3">
+          <h4 class="card-title"><a href="{{ plan.url | relative_url }}">{{ plan.title }}</a></h4>
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
+</section>
 
-<h2 class="my-5" id="references">참고 자료</h3>
-<div class="row">
-  {% for reference in site.data.references %}
-  <div class="col-sm-4">
-    <div class="card my-2 card-outline-info">
-      <div class="card-block text-center">
-        <h4 class="card-title"><a href="{{ reference.url }}" target="_blank">{{ reference.title | newline_to_br }}</a></h4>
-        {% if reference.source %}<p class="text-muted"><a href="{{ reference.source }}" target="_blank">출처</a></p>{% endif %}
+<section id="references">
+  <h2>참고 자료 <small>references</small></h2>
+  <div class="row">
+    {% for reference in site.data.references %}
+    <div class="col-sm-4">
+      <div class="card my-2 border-info">
+        <div class="card-body text-center py-3">
+          <h4 class="card-title"><a href="{{ reference.url }}" target="_blank">{{ reference.title | newline_to_br }}</a></h4>
+          {% if reference.source %}<p class="text-muted"><a href="{{ reference.source }}" target="_blank">출처</a></p>{% endif %}
+        </div>
       </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
-</div>
-
-<style>
-  .card, .card-block {
-    box-sizing: border-box;
-    transition: background-color .5s, border .5s, box-shadow .5s;
-  }
-  .card-title {
-    margin-top: .75rem;
-  }
-  .card-inverse a {
-    color: #fff;
-  }
-  .card-primary:hover {
-    background: transparent;
-    border: 1px solid #0275d8;
-    box-shadow : 0 0 10px #888;
-  }
-  .card-primary:hover a {
-    color: #0275d8;
-  }
-  .card-outline-success a {
-    color: #5cb85c;
-  }
-  .card-outline-success:hover {
-    background: #5cb85c;
-  }
-  .card-outline-success:hover a {
-    color: #fff;
-  }
-</style>
+</section>

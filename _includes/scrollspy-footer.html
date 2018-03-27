@@ -8,14 +8,11 @@ $(function(){
   $('#toc ul.nav li').addClass('nav-item');
   $('#toc ul.nav li > a').addClass('nav-link');
   $('#markdown-toc ul:first').remove();
-  $('#toc').prepend('<div class="clearfix"><a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a><a class="badge badge-warning to-list float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><small>수정하기</small></a></div>');
-  $('#toc').append('<div class="clearfix"><a class="badge badge-info to-list" href="{{ '/' | relative_url }}"><small>목록으로</small></a><a class="badge badge-warning to-list float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><small>수정하기</small></a>');
+  $('#toc').prepend('<div class="clearfix"><a class="text-muted ml-3" href="{{ '/' | relative_url }}"><i class="fa fa-home" aria-hidden="true"></i></a><a class="text-muted float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><i class="fa fa-edit"></i></a> <a class="text-muted float-right mr-3" href="{{ site.github.repository_url | append: '/blob/gh-pages/' | append: page.path }}"><i class="fa fa-github"></i></a></div>');
+  $('#toc').append('<div class="clearfix"><a class="text-muted ml-3" href="{{ '/' | relative_url }}"><i class="fa fa-home" aria-hidden="true"></i></a><a class="text-muted float-right" href="{{ site.github.repository_url | append: '/edit/gh-pages/' | append: page.path }}"><i class="fa fa-edit"></i></a> <a class="text-muted float-right mr-3" href="{{ site.github.repository_url | append: '/blob/gh-pages/' | append: page.path }}"><i class="fa fa-github"></i></a>');
   $('#toc').on('click', '.active', function(){
     $(this).removeClass('active');
   });
-  $('body').on('activate.bs.scrollspy', function () {
-    console.log('!!!!!');
-  })
 });
 </script>
 <style type="text/css">

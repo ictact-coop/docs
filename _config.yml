@@ -13,7 +13,6 @@ kramdown:
   hard_wrap: false
 
 sass:
-  sass_dir: _scss
   style: compressed
 
 collections:
