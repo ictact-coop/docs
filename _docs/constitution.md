@@ -565,6 +565,7 @@ category: constitution
 ## 수정 이력
 
 - [2017-03-22 임시 총회 의결로 정관 수정](https://github.com/ictact-coop/docs/commit/14650194639a6ab5f0ed9e4710cbc11f530c421f?short_path=02c707c#diff-02c707c0334b984ad84a31e2117ffd5d)
+- [2018년 정기 총회에서 의결한 정관 변경 사항을 추가합니다.](https://github.com/ictact-coop/docs/commit/c8de7225baea9255a04e7f15b9343cbad667a236#diff-02c707c0334b984ad84a31e2117ffd5d)
 
 
 [목록 보기]({{ site.github.repository_url | append: '/commits/gh-pages/' | append: page.path }}){:.badge.badge-info.pull-right}
