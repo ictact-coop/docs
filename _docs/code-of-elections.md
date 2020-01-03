@@ -180,3 +180,9 @@ title: 선거관리 규약
 
 * TOC
 {:toc}
+
+## 수정 이력
+
+- [2019.2.19 임시총회 내용 반영: 선거관리규약 수정](https://github.com/ictact-coop/docs/commit/31f385523fdebe6afec1fd0bf45d1989f5ccdf42)
+
+[목록 보기]({{ site.github.repository_url | append: '/commits/gh-pages/' | append: page.path }}){:.badge.badge-info.pull-right}
